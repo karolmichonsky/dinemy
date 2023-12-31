@@ -1,5 +1,6 @@
 import Home from './Components/Home';
 import Header from './Components/Header';
+import Recommend from './Components/Recommend';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
         </Routes>
+        <Recommend />
       </div>
     </Router>
   );

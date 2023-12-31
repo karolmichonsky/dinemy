@@ -1,8 +1,9 @@
 import React from 'react';
-import recommend from '../Assets/Recommend.png'
+import pasta from '../Assets/pasta.png';
+import recommended from '../Assets/recommended-background.png';
 
-const reccomendImg = {
-    backgroundImage: `url(${recommend})`,
+const recommendedBackground = {
+    backgroundImage: `url(${recommended})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -11,16 +12,21 @@ const reccomendImg = {
 
 const Recommend = () => {
     return (
-        <div>
-            <div>
-                <img src="{reccomendImg}" alt="" />
+        <div className=' px-72 py-16'>
+            <h1 style={recommendedBackground} className='text-5xl font-bold text-center py-2'>Recommendations</h1>
+            <h2 className='text-4xl text-center py-2'>Every week we recommend 3 bestsellers dishes</h2>
+            <div className='flex justify-center items-center gap-32 flex-wrap'>
+                <div className='py-16'>
+                    <img src={pasta} alt="" className=' w-72 min-w-40' />
+                </div>
+                <div>
+                    <img src={pasta} alt="" className=' w-72 min-w-40' />
+                </div>
+                <div>
+                    <img src={pasta} alt="" className=' w-72 min-w-40' />
+                </div>
             </div>
-            <div>
-                <img src="{reccomendImg}" alt="" />
-            </div>
-            <div>
-                <img src="{reccomendImg}" alt="" />
-            </div>
+
         </div>
     );
 };
