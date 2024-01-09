@@ -13,8 +13,8 @@ const recommendedBackground = {
 const Recommend = () => {
     return (
         <div className=' px-72 py-16 bg-white'>
-            <h1 style={recommendedBackground} className='text-5xl font-bold text-center py-2'>Recommendations</h1>
-            <h2 className='text-3xl text-center py-4 pt-2 mb-4'>Every week we recommend 3 bestseller dishes</h2>
+            <h1 style={recommendedBackground} className='text-4xl font-bold text-center'>Recommendations</h1>
+            <h3 className='text-lg text-center py-4 pt-2 mb-4 text-gray-400'>Every week we recommend 3 bestseller dishes</h3>
             <div className='flex justify-center items-center gap-20 flex-wrap'>
                 <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500'>
                     <img src={pasta} alt="" className=' w-72 min-w-40 flex mx-auto' />
