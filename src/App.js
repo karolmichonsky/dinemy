@@ -2,6 +2,7 @@ import Home from './Components/Home';
 import Header from './Components/Header';
 import Recommend from './Components/Recommend';
 import Banner from './Components/Banner';
+import Store from './Components/Store';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -15,6 +16,7 @@ function App() {
         </Routes>
         <Recommend />
         <Banner />
+        <Store />
       </div>
     </Router>
   );
