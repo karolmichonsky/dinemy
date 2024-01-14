@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Recommend from './Components/Recommend';
 import Banner from './Components/Banner';
 import Store from './Components/Store';
+import Footer from './Components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -17,6 +18,7 @@ function App() {
         <Recommend />
         <Banner />
         <Store />
+        <Footer />
       </div>
     </Router>
   );
