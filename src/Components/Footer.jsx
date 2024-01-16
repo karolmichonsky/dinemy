@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='flex flex-wrap text-white bg-amber-800 px-72 py-16'>
             <div className='flex flex-col px-8 w-1/2'>
                 <h1 className=' text-2xl font-bold'>Dinemy</h1>
-                <h3 className=' text-lg lg:hidden'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus provident itaque est aspernatur alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus provident itaque est aspernatur alias.</h3>
+                <h3 className=' text-lg '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus provident itaque est aspernatur alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus provident itaque est aspernatur alias.</h3>
                 <p className='flex pt-2'><DevicePhoneMobileIcon className=' w-6 mr-2'/>Rzeszow, Grodzisko 324 </p>
                 <p className='flex pt-2'><MapPinIcon className=' w-6 mr-2'/>+47 928 929 929</p>
             </div>

@@ -12,7 +12,7 @@ const heroImg = {
 
 const Home = () => {
     return (
-        <div style={heroImg} className='w-screen h-[800px] gap-[500px] flex justify-center items-center font-sans sm:bg-white'>
+        <div style={heroImg} className='w-screen h-[800px] gap-[500px] flex justify-center items-center font-sans'>
             <div className=' text-center max-w-[400px]'>
                 <h1 className='text-5xl font-bold'>Order your favorite food with <span className=' text-amber-800'>Dinemy</span>. </h1>
                 <h3 className='text-4xl'>Best dishes in <span className='font-bold'>one</span> place</h3>
