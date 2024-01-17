@@ -12,7 +12,7 @@ const recommendedBackground = {
 
 const Recommend = () => {
     return (
-        <div className=' px-72 py-16 bg-white'>
+        <div className='p-8 md:px-72 md:py-16 bg-white'>
             <h1 style={recommendedBackground} className='text-4xl font-bold text-center'>Recommendations</h1>
             <h3 className='text-lg text-center py-4 pt-2 mb-4 text-gray-400'>Every week we recommend 3 bestseller dishes</h3>
             <div className='flex justify-center items-center gap-20 flex-wrap'>

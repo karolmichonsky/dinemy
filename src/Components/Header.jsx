@@ -13,13 +13,13 @@ const Header = () => {
                     <input type="text" name="" id="" className=' bg-orange-500 w-full px-3 focus:outline-none text-white'/>
                 </div>
                 <div className='flex'>
-                    <ul className='flex justify-between p-10'>
+                    <ul className='flex justify-between p-10 sm:hidden md:flex'>
                         <li className='px-7 py-2 text-2xl text-white mx-1 hover:bg-black hover:bg-opacity-5 rounded-xl duration-150'>HOME</li>
                         <li className='px-7 py-2 text-2xl text-white mx-1 hover:bg-black hover:bg-opacity-5 rounded-xl duration-150'>MENU</li>
                         <li className='px-7 py-2 text-2xl text-white bg-orange-500 rounded-xl drop-shadow-md mx-1 hover:bg-orange-600 duration-150'>LOGIN</li>
                     </ul>
-                    <Bars3Icon className='w-7 hidden' />
-                    <XMarkIcon className='w-7 hidden' />
+                    <Bars3Icon className='w-7 lg:hidden' />
+                    <XMarkIcon className='w-7 lg:hidden' />
                 </div>
             </div>
         </div>
