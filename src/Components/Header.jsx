@@ -8,7 +8,7 @@ const Header = () => {
                 <div>
                     <a href="/" className='text-3xl bold text-white font-roboto font-bold'>DINEMY</a>
                 </div>
-                <div className='rounded-2xl w-96 h-10 bg-orange-500 drop-shadow-md px-3 hidden'>
+                <div className='rounded-2xl w-96 h-10 bg-orange-500 drop-shadow-md px-3 hidden lg:flex'>
                     <MagnifyingGlassIcon className='w-7' />
                     <input type="text" name="" id="" className=' bg-orange-500 w-full px-3 focus:outline-none text-white'/>
                 </div>
