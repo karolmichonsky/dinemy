@@ -3,7 +3,7 @@ import pasta from '../Assets/pasta.png';
 
 const Recommend = () => {
     return (
-        <div className='p-8 bg-white'>
+        <div className='p-8 bg-white lg:pb-8 lg:pt-16'>
             <h1 className='text-4xl font-bold text-center break-before-auto'>Recommendations</h1>
             <h3 className='text-lg text-center py-4 pt-2 mb-4 text-gray-400'>Every week we recommend 3 bestseller dishes</h3>
             <div className='flex justify-center items-center gap-20 flex-wrap'>

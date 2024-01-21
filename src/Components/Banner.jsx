@@ -4,8 +4,8 @@ import pasta from '../Assets/pasta.png';
 
 const Banner = () => {
     return (
-        <div className='p-8  flex flex-col'>
-            <div className='mx-auto'>
+        <div className='p-8  flex flex-col lg:py-16'>
+            <div className='mx-auto lg:py-8'>
                 <img src={pasta} alt="" className='' />
             </div>
             <div className='text-center px-20'>
