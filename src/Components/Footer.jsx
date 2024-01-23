@@ -16,6 +16,7 @@ const Footer = () => {
                 <ul className=' list-none'>
                     <a href="/"><li>Home</li></a>
                     <a href="/"><li>Menu</li></a>
+                    <a href="/"><li>Shopping Cart</li></a>
                     <a href="/"><li>Support</li></a>
                     <a href="/"><li>Login</li></a>
                 </ul>
@@ -25,6 +26,7 @@ const Footer = () => {
                 <ul className=' list-none'>
                     <a href="/"><li>Home</li></a>
                     <a href="/"><li>Menu</li></a>
+                    <a href="/"><li>Shopping Cart</li></a>
                     <a href="/"><li>Support</li></a>
                     <a href="/"><li>Login</li></a>
                 </ul>

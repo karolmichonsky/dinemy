@@ -10,19 +10,19 @@ const Recommend = () => {
                 <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500'>
                     <img src={pasta} alt="" className=' w-72 min-w-40 flex mx-auto ease-in-out duration-500' />
                     <h1 className='text-4xl text-center py-2'>Lorem ipsum</h1>
-                    <p className='text-center text-xl py-2'>Lorem ipsum dolor sit, amet consectetur</p>
+                    <p className='text-center text-xl py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500'>ADD TO CART</button>
                 </div>
                 <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500'>
                     <img src={pasta} alt="" className=' w-72 min-w-40 flex mx-auto ease-in-out duration-500' />
                     <h1 className='text-4xl text-center py-2'>Lorem ipsum</h1>
-                    <p className='text-center text-xl py-2'>Lorem ipsum dolor sit, amet consectetur</p>
+                    <p className='text-center text-xl py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500'>ADD TO CART</button>
                 </div>
                 <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500'>
                     <img src={pasta} alt="" className=' w-72 min-w-40 flex mx-auto  ease-in-out duration-500' />
                     <h1 className='text-4xl text-center py-2'>Lorem ipsum</h1>
-                    <p className='text-center text-xl py-2'>Lorem ipsum dolor sit, amet consectetur</p>
+                    <p className='text-center text-xl py-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500'>ADD TO CART</button>
                 </div>
             </div>
