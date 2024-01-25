@@ -4,7 +4,7 @@ import { ShoppingBagIcon, UserIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
     return (
-        <div className='w-screen h-[80px] bg-amber-800 fixed drop-shadow-lg'>
+        <div className='w-screen h-[80px] bg-amber-800 fixed drop-shadow-lg z-[2]'>
             <div className=' flex justify-between items-center w-full h-full px-8'>
                 <div>
                     <a href="/" className='text-3xl bold text-white font-roboto font-bold mx-3'>DINEMY</a>
