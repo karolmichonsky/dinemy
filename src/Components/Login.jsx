@@ -4,8 +4,8 @@ import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 const Login = ({ closeLogin }) => {
 
     return (
-        <div className={'z-[1] bg-white pt-72 min-w-full min-h-full  lg:bg-opacity-30 lg:bg-black drop-shadow-md fixed'} onClick={closeLogin} >
-            <div className='flex flex-col justify-center mx-auto p-6'>
+        <div className={'z-[1] bg-white pt-0 min-w-full min-h-screen lg:bg-opacity-30 lg:bg-black drop-shadow-md flex justify-center items-center absolute top-0'}  onClick={closeLogin} >
+            <div className='flex flex-col justify-center mx-auto '>
                 <div className='flex flex-col justify-center items-center mx-auto lg:bg-white lg:h-[350px] lg:w-[450px] lg:rounded-lg'>
                     <h1 className=' text-4xl text-center font-bold'>Login</h1>
                     <div className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-72 h-10 my-2'>
