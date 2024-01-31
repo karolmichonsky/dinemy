@@ -1,17 +1,10 @@
 import React from 'react';
 import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react';
 
-const Login = () => {
-
-    const [login, setLogin] = useState(true)
-    
-    function handleLogin() {
-        setLogin(login => !login)
-    }
+const Login = ({ closeLogin }) => {
 
     return (
-        <div className={'z-[1] bg-white pt-72 min-w-full min-h-full lg:bg-opacity-30 lg:bg-black drop-shadow-md ' + (login ? 'fixed' : 'hidden') } onClick={handleLogin} >
+        <div className={'z-[1] bg-white pt-72 min-w-full min-h-full  lg:bg-opacity-30 lg:bg-black drop-shadow-md fixed'} onClick={closeLogin} >
             <div className='flex flex-col justify-center mx-auto p-6'>
                 <div className='flex flex-col justify-center items-center mx-auto lg:bg-white lg:h-[350px] lg:w-[450px] lg:rounded-lg'>
                     <h1 className=' text-4xl text-center font-bold'>Login</h1>
