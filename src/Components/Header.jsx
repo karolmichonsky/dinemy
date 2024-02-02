@@ -16,9 +16,9 @@ const Header = () => {
                 <div>
                     <a href="/" className='text-3xl bold text-white font-roboto font-bold mx-3'>DINEMY</a>
                 </div>
-                <div className='rounded-2xl w-36 h-10 bg-orange-500 flex drop-shadow-md px-3 sm:w-72 lg:w-96 duration-300'>
-                    <MagnifyingGlassIcon className='w-7' />
-                    <input type="text" name="" id="" className=' bg-orange-500 w-full px-3 focus:outline-none text-white'/>
+                <div className='rounded-2xl w-36 h-10 bg-white flex drop-shadow-md px-3 sm:w-72 lg:w-96 duration-300'>
+                    <MagnifyingGlassIcon className='w-7 text-orange-500' />
+                    <input type="text" name="" id="" className=' bg-white w-full px-3 focus:outline-none text-black'/>
                 </div>
                 <div className='flex'>
                     <div className='flex'>
