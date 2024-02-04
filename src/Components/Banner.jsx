@@ -1,12 +1,12 @@
 import React from 'react';
-import pasta from '../Assets/pasta.png';
+import shrimps from '../Assets/shrimps.png';
 
 
 const Banner = () => {
     return (
         <div className='p-8  flex flex-col lg:py-16'>
             <div className='mx-auto lg:py-8'>
-                <img src={pasta} alt="" className='' />
+                <img src={shrimps} alt="" className='' />
             </div>
             <div className='text-center px-20'>
                 <h1 className=' text-4xl font-bold py-4'>Lorem ipsum dolor sit</h1>
