@@ -6,3 +6,16 @@
 .font-roboto{
     font-family: Roboto;
 }
+
+@keyframes rotation{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotation{
+    animation: rotation linear 50s infinite;
+}

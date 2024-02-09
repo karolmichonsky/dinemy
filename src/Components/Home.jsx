@@ -18,7 +18,7 @@ const Home = () => {
                 <h3 className='text-4xl'>Best dishes in <span className='font-bold'>one</span> place</h3>
             </div>
             <div className='p-7 pb-0'>
-                <img src={fries} alt="" className=' drop-shadow-2xl'/>
+                <img src={fries} alt="" className=' drop-shadow-2xl rotation'/>
             </div>
         </div>
     );
