@@ -7,7 +7,7 @@ const RecommendData = [
     {
         img: padthai,
         name: "Pad Thai",
-        description: "A classic Thai stir-fry dish featuring thin rice noodles tossed with tofu, shrimp, or chicken",
+        description: "A classic Thai stir-fry dish with rice noodles, tofu, shrimp, or chicken, featuring bean sprouts, peanuts, and a tangy sauce of tamarind, fish sauce, and lime.",
         price: "17.50",
         choice: "Chicken, Shrimp, Tofu",
         rating: 4,
@@ -15,7 +15,7 @@ const RecommendData = [
     {
         img: panang,
         name: "Panang",
-        description: "Thai dish with tender meat or tofu in a coconut milk-based sauce, boasting a perfect balance of sweet, spicy, and savory flavors",
+        description: "Thai dish with meat or tofu in coconut milk sauce. Balances sweet, spicy, and savory flavors with lime leaves, Thai basil, and chili peppers.",
         price: "12.99",
         choice: "Chicken, Beef, Shrimp, Tofu",
         rating: 4,
@@ -23,7 +23,7 @@ const RecommendData = [
     {
         img: pasta,
         name: "Red Pasta",
-        description: "Al dente pasta coated in a robust tomato-based sauce, complemented by savory herbs",
+        description: "Traditional Italian pasta with tomato sauce, onions, garlic, ground meat, and herbs like basil and oregano, creating a savory and flavorful dish.",
         price: "13.25",
         choice: "Chicken, Vege, Whole wheat",
         rating: 3,
@@ -40,8 +40,8 @@ const Recommend = () => {
                     <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500 basis-full'>
                         <img src={recommend.img} alt="" className=' w-72 min-w-40 flex mx-auto ease-in-out duration-500' />
                         <h1 className='text-4xl font-bold text-center py-2'>{recommend.name}</h1>
-                        <p className='text-center text-xl py-2 flex-1 min-h-40  '>{recommend.description}</p>
-                        <h1 className='text-4xl font-bold text-center py-2 pb-4'>{recommend.price}$</h1>
+                        <p className='text-center text-xl py-2 flex-1  '>{recommend.description}</p>
+                        <h1 className='text-3xl font-bold text-center py-2 pb-4'>{recommend.price}$</h1>
                         <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500'>ADD TO CART</button>
                     </div>
                 ))}
