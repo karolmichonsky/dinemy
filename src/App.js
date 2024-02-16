@@ -23,9 +23,7 @@ function App() {
         <Store />
         <Footer /> */}
         <Dishes />
-        <Dishes />
-        <Dishes />
-        <Dishes />
+
 
       </div>
     </Router>

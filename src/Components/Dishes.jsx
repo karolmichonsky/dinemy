@@ -1,16 +1,23 @@
 import React from 'react';
-import padthai from '../Assets/padthai.png'
+import data from '../database/data.js'
 
 const Dishes = () => {
     return (
-        <div className=' bg-white p-8 border-solid border-2 rounded-xl m-2 flex'>
-            <div className='pr-4'>
-                <h1 className=' text-md font-bold py-1'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
-                <p className='py-1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsum, ullam facilis quae repellat pariatur qui dicta, accusantium ex, </p>
-                <p className=' py-1'>Chicken, tofu, beef</p>
-                <h1 className=' font-bold'>12.50$</h1>
-            </div>
-            <img src={padthai} alt="padthai" className=' w-1/4 h-1/4'/>
+        <div className=' '>
+            {data.map((dishes) => (
+                <div className=' bg-white p-8  drop-shadow-lg rounded-xl m-4 flex'>
+                    <div className='pr-4 w-3/4'>
+                        <h1 className=' text-md font-bold py-1'>{dishes.title}</h1>
+                        <p className='py-1'>{dishes.description}</p>
+                        <p className=' py-1'>{dishes.choice}</p>
+                        <h1 className=' font-bold'>{dishes.price}$</h1>
+                    </div>
+                    <div className=' w-1/4'>
+                        <img src={dishes.img} alt="" className='  flex items-center justify-center' />
+                    </div>
+                </div>
+            ))}
+
         </div>
     );
 };
