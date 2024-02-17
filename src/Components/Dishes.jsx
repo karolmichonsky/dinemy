@@ -1,9 +1,25 @@
 import React from 'react';
 import data from '../database/data.js'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+
 
 const Dishes = () => {
     return (
-        <div className=' '>
+        <div className=' flex flex-col flex-wrap'>
+            <div className=' pt-20 bg-white drop-shadow-md'>
+                <div className='p-4 flex items-center'>
+                    <MagnifyingGlassIcon className=' w-9 rounded-2xl bg-slate-400 p-2 drop-shadow-lg mx-2'/>
+                    <ul className=' text-xl flex'>
+                        <li className='mx-2'>Indian</li>
+                        <li className='mx-2' >Indian</li>
+                        <li className='mx-2'>Indian</li>
+                        <li className='mx-2'>Indian</li>
+                        <li className='mx-2'>Indian</li>
+                        <li className='mx-2'>Indian</li>
+                        <li className='mx-2'>Indian</li>
+                    </ul>
+                </div>
+            </div>
             {data.map((dishes) => (
                 <div className=' bg-white p-8  drop-shadow-lg rounded-xl m-4 flex'>
                     <div className='pr-4 w-3/4'>
