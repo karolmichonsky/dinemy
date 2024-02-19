@@ -1,22 +1,26 @@
 import React from 'react';
 import data from '../database/data.js'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
-
+import { useState } from 'react';
 
 const Dishes = () => {
+    const [myCategory, setMyCategory] = useState('');
+
+    const Cuisines = ['Pizza', 'Burgers', 'Chinese', 'Indian', 'Sushi', 'Italian', 'Polish'];
+
+    const handleClick = (event) => {
+        setMyCategory(event.target.innerText);
+    };
+
     return (
         <div className=' flex flex-col flex-wrap'>
             <div className=' pt-20 bg-white drop-shadow-md'>
                 <div className='p-4 flex items-center'>
-                    <MagnifyingGlassIcon className=' w-9 rounded-2xl bg-slate-400 p-2 drop-shadow-lg mx-2'/>
+                    <MagnifyingGlassIcon className=' w-9 rounded-2xl bg-slate-400 p-2 drop-shadow-lg mx-2' />
                     <ul className=' text-xl flex'>
-                        <li className='mx-2'>Indian</li>
-                        <li className='mx-2' >Indian</li>
-                        <li className='mx-2'>Indian</li>
-                        <li className='mx-2'>Indian</li>
-                        <li className='mx-2'>Indian</li>
-                        <li className='mx-2'>Indian</li>
-                        <li className='mx-2'>Indian</li>
+                        {Cuisines.map(food => (
+                            <li className='mx-2 cursor-pointer' onClick={handleClick}>{food}</li>
+                        ))}
                     </ul>
                 </div>
             </div>
