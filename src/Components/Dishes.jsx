@@ -17,7 +17,7 @@ const Dishes = () => {
             <div className=' pt-20 bg-white drop-shadow-md'>
                 <div className='p-4 flex items-center'>
                     <MagnifyingGlassIcon className=' w-9 rounded-2xl bg-slate-400 p-2 drop-shadow-lg mx-2' />
-                    <ul className=' text-xl flex'>
+                    <ul className=' text-xl flex flex-wrap items-center justify-center'>
                         {Cuisines.map(food => (
                             <li className='mx-2 cursor-pointer' onClick={handleClick}>{food}</li>
                         ))}
