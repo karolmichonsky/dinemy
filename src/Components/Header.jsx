@@ -7,7 +7,7 @@ const Header = () => {
     const [showLogin, setShowLogin] = useState(false);
 
     const toggleLogin = () => {
-        setShowLogin(showLogin => !showLogin);
+        
     };
 
     return (
