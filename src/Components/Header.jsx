@@ -4,7 +4,7 @@ import { ShoppingBagIcon, UserIcon } from '@heroicons/react/24/solid'
 import Login from './Login';
 
 const Header = () => {
-    const [showLogin, setShowLogin] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
 
     const toggleLogin = () => {
         
