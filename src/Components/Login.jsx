@@ -1,6 +1,7 @@
 import React from 'react';
 import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
+import data from '../database/account.js'
 
 const Login = ({ closeLogin }) => {
 
@@ -11,6 +12,29 @@ const Login = ({ closeLogin }) => {
     const [register, setRegister] = useState(false);
     const [confirmText, setConfirmText] = useState('Login');
     const [registerText, setRegisterText] = useState("Don't have an account? Create one");
+
+    const [loginValue, setLoginValue] = useState('');
+    const [passwordValue, setPasswordValue] = useState('');
+
+    const loginHandle = (event) => {
+        setLoginValue(event.target.value);
+        console.log(loginValue);
+    };
+    
+    const passwordHandle = (event) => {
+        setPasswordValue(event.target.value);
+    };
+    
+    const checkAccount = () => {
+        for (let i = 0; i < data.length; i++){
+            if(data[i].email == loginValue && data[i].password == passwordValue){
+                console.log("Login");
+            }
+            else{
+                console.log('Wrong email or password');
+            }
+        }
+    }
 
     const toggleRegister = () => {
         setRegister(register => !register);
@@ -32,19 +56,19 @@ const Login = ({ closeLogin }) => {
                     <h1 className=' text-4xl text-center font-bold lg:pb-4 drop-shadow-lg'>{confirmText}</h1>
                     <div className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-72 h-10 my-2'>
                         <EnvelopeIcon className='w-8' />
-                        <input type="email" name="" id="" placeholder='E-Mail' className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
+                        <input type="email" name="" id="" placeholder='E-Mail' onChange={loginHandle} className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
                     </div>
                     
                     <div className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-72 h-10 my-2'>
                         <LockClosedIcon className='w-8 ' />
-                        <input type="password" name="" id="" placeholder='Password' className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
+                        <input type="password" name="" id="" placeholder='Password' onChange={passwordHandle} className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
                     </div>
                     {register && <div className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-72 h-10 my-2 '>
                         <LockClosedIcon className=' w-8' />
                         <input type="password" name="" id="" placeholder='Repeat Password' className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
                     </div>}
                         <p className='cursor-pointer pt-2 underline'  onClick={toggleRegister}>{registerText}</p>
-                        <button className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-18 h-10 my-2 text-white items-center text-2xl mx-2 w-28 justify-center hover:bg-amber-800 duration-500'>{confirmText}</button>
+                        <button onClick={checkAccount} className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-18 h-10 my-2 text-white items-center text-2xl mx-2 w-28 justify-center hover:bg-amber-800 duration-500'>{confirmText}</button>
                 </div>
 
             </div>

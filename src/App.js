@@ -15,14 +15,14 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        {/* <Routes>
+        <Routes>
           <Route exact path='/' element={<Home />} />
         </Routes>
         <Recommend />
         <Banner />
         <Store />
-        <Footer /> */}
-        <Dishes />
+        <Footer />
+        
 
 
       </div>
