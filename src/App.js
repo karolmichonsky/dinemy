@@ -22,9 +22,6 @@ function App() {
         <Banner />
         <Store />
         <Footer />
-        
-
-
       </div>
     </Router>
   );
