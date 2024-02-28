@@ -15,6 +15,7 @@ const Login = ({ closeLogin }) => {
 
     const [loginValue, setLoginValue] = useState('');
     const [passwordValue, setPasswordValue] = useState('');
+    const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
 
     const [loginText, setLoginText] = useState('');
 
@@ -22,31 +23,54 @@ const Login = ({ closeLogin }) => {
         setLoginValue(event.target.value);
         console.log(loginValue);
     };
-    
+
     const passwordHandle = (event) => {
         setPasswordValue(event.target.value);
     };
-    
+
+    const confirmPasswordHandle = (event) => {
+        setConfirmPasswordValue(event.target.value);
+    };
+
     const checkAccount = () => {
-        for (let i = 0; i < data.length; i++){
-            if(data[i].email === loginValue && data[i].password === passwordValue){
-                setLoginText(" ");
-                break;
-            }
-            else{
-                setLoginText("Wrong email or password. Try Again.");
+        if (!register) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].email === loginValue && data[i].password === passwordValue) {
+                    setLoginText(" ");
+                    break;
+                }
+                else {
+                    setLoginText("Wrong email or password. Try Again.");
+                }
             }
         }
+        else {
+            if(passwordValue === confirmPasswordValue){
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].email === loginValue){
+                        setLoginText("There is an account already signed to this e-mail.");
+                        break;
+                    }
+                    else {
+                        //Function to create user
+                    }
+                }
+            }
+            else{
+                setLoginText("Password doesn't match.");
+            }
+        }
+
     }
 
     const toggleRegister = () => {
         setRegister(register => !register);
         setLoginText(" ");
 
-        if (register){
+        if (register) {
             setConfirmText('Login');
             setRegisterText("Don't have an account? Create one");
-        } 
+        }
         else {
             setConfirmText('Sign Up');
             setRegisterText("You already have an account? Login");
@@ -54,7 +78,7 @@ const Login = ({ closeLogin }) => {
     };
 
     return (
-        <div className={'z-[1] bg-white pt-0 min-w-full min-h-screen lg:bg-opacity-80 lg:bg-black drop-shadow-md flex justify-center items-center absolute lg:top-0 duration-300'}  onClick={closeLogin} >
+        <div className={'z-[1] bg-white pt-0 min-w-full min-h-screen lg:bg-opacity-80 lg:bg-black drop-shadow-md flex justify-center items-center absolute lg:top-0 duration-300'} onClick={closeLogin} >
             <div className='flex flex-col justify-center mx-auto ' onClick={stopPropagation}>
                 <div className='flex flex-col justify-center items-center mx-auto lg:bg-white lg:h-[400px] lg:w-[450px] lg:rounded-lg'>
                     <h1 className=' text-4xl text-center font-bold lg:pb-4 drop-shadow-lg'>{confirmText}</h1>
@@ -62,18 +86,18 @@ const Login = ({ closeLogin }) => {
                         <EnvelopeIcon className='w-8' />
                         <input type="email" name="" id="" placeholder='E-Mail' onChange={loginHandle} className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
                     </div>
-                    
+
                     <div className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-72 h-10 my-2'>
                         <LockClosedIcon className='w-8 ' />
                         <input type="password" name="" id="" placeholder='Password' onChange={passwordHandle} className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
                     </div>
                     {register && <div className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-72 h-10 my-2 '>
                         <LockClosedIcon className=' w-8' />
-                        <input type="password" name="" id="" placeholder='Confirm Password' className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
+                        <input type="password" name="" id="" placeholder='Confirm Password' onChange={confirmPasswordHandle} className='bg-orange-500 w-full px-3 focus:outline-none text-white placeholder:text-gray-300 ' />
                     </div>}
-                        <p className='cursor-pointer pt-2 underline'  onClick={toggleRegister}>{registerText}</p>
-                        <button onClick={checkAccount} className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-18 h-10 my-2 text-white items-center text-2xl mx-2 w-28 justify-center hover:bg-amber-800 duration-500'>{confirmText}</button>
-                        <p className=' text-red-600'>{loginText}</p>
+                    <p className='cursor-pointer pt-2 underline' onClick={toggleRegister}>{registerText}</p>
+                    <button onClick={checkAccount} className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-18 h-10 my-2 text-white items-center text-2xl mx-2 w-28 justify-center hover:bg-amber-800 duration-500'>{confirmText}</button>
+                    <p className=' text-red-600'>{loginText}</p>
                 </div>
 
             </div>
