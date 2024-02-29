@@ -19,9 +19,11 @@ const Login = ({ closeLogin }) => {
 
     const [loginText, setLoginText] = useState('');
 
+    const mailRegex = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
+    const passwordRegex = new RegExp("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$");
+
     const loginHandle = (event) => {
         setLoginValue(event.target.value);
-        console.log(loginValue);
     };
 
     const passwordHandle = (event) => {
@@ -40,23 +42,36 @@ const Login = ({ closeLogin }) => {
                     break;
                 }
                 else {
-                    setLoginText("Wrong email or password. Try Again.");
+                    setLoginText("You have entered an invalid username or password");
                 }
             }
+
         }
         else {
-            if(passwordValue === confirmPasswordValue){
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i].email === loginValue){
-                        setLoginText("There is an account already signed to this e-mail.");
-                        break;
+            if (passwordValue === confirmPasswordValue) {
+                if (mailRegex.test(loginValue)) {
+                    if (passwordRegex.test(passwordValue)) {
+                        for (let i = 0; i < data.length; i++) {
+                            if (data[i].email === loginValue) {
+                                setLoginText("There is already an account signed to this e-mail.");
+                                break;
+                            }
+                            else {
+                                setLoginText(" ");
+
+                                //Function to create user
+                            }
+                        }
                     }
-                    else {
-                        //Function to create user
+                    else{
+                        setLoginText("Your password must be at least 8 characters long, 1 uppercase, 1 number");
                     }
                 }
+                else {
+                    setLoginText("Wrong e-mail format.");
+                }
             }
-            else{
+            else {
                 setLoginText("Password doesn't match.");
             }
         }
@@ -64,7 +79,6 @@ const Login = ({ closeLogin }) => {
     }
 
     const toggleRegister = () => {
-        setRegister(register => !register);
         setLoginText(" ");
 
         if (register) {
@@ -75,6 +89,8 @@ const Login = ({ closeLogin }) => {
             setConfirmText('Sign Up');
             setRegisterText("You already have an account? Login");
         }
+        setRegister(register => !register);
+
     };
 
     return (
@@ -97,7 +113,7 @@ const Login = ({ closeLogin }) => {
                     </div>}
                     <p className='cursor-pointer pt-2 underline' onClick={toggleRegister}>{registerText}</p>
                     <button onClick={checkAccount} className='bg-orange-500 flex drop-shadow-md px-3 rounded-2xl w-18 h-10 my-2 text-white items-center text-2xl mx-2 w-28 justify-center hover:bg-amber-800 duration-500'>{confirmText}</button>
-                    <p className=' text-red-600'>{loginText}</p>
+                    <p className=' text-red-600 px-12 text-center'>{loginText}</p>
                 </div>
 
             </div>
