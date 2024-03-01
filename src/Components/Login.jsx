@@ -19,8 +19,8 @@ const Login = ({ closeLogin }) => {
 
     const [loginText, setLoginText] = useState('');
 
-    const mailRegex = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
-    const passwordRegex = new RegExp("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$");
+    const mailRegex = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$");
+    const passwordRegex = new RegExp("^(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
 
     const loginHandle = (event) => {
         setLoginValue(event.target.value);
@@ -57,22 +57,30 @@ const Login = ({ closeLogin }) => {
                                 break;
                             }
                             else {
-                                setLoginText(" ");
-
+                                setLoginText("b");
+                                closeLogin();
                                 //Function to create user
                             }
                         }
                     }
-                    else{
-                        setLoginText("Your password must be at least 8 characters long, 1 uppercase, 1 number");
+                    else {
+                        if (passwordValue.length < 8) {
+                            setLoginText("Password must be at least 8 characters long.");
+                        }
+                        else if (!/[A-Z]/.test(passwordValue)) {
+                            setLoginText("Password must contain at least 1 uppercase letter.");
+                        }
+                        else if (!/\d/.test(passwordValue)) {
+                            setLoginText("Password must contain at least 1 number.");
+                        }
                     }
                 }
                 else {
-                    setLoginText("Wrong e-mail format.");
+                    setLoginText("Email must be in the correct format (example@example.com)");
                 }
             }
             else {
-                setLoginText("Password doesn't match.");
+                setLoginText("Passwords doesn't match.");
             }
         }
 
