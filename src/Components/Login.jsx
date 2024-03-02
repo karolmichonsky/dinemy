@@ -38,7 +38,7 @@ const Login = ({ closeLogin }) => {
         if (!register) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].email === loginValue && data[i].password === passwordValue) {
-                    setLoginText(" ");
+                    closeLogin();
                     break;
                 }
                 else {
@@ -57,9 +57,8 @@ const Login = ({ closeLogin }) => {
                                 break;
                             }
                             else {
-                                setLoginText("b");
                                 closeLogin();
-                                //Function to create user
+                                break;
                             }
                         }
                     }
