@@ -42,7 +42,7 @@ const Login = ({ closeLogin }) => {
                     break;
                 }
                 else {
-                    setLoginText("You have entered an invalid username or password");
+                    setLoginText("Incorrect email or password. Please try again.");
                 }
             }
 
@@ -57,8 +57,7 @@ const Login = ({ closeLogin }) => {
                                 break;
                             }
                             else {
-                                closeLogin();
-                                break;
+                                setLoginText("Account creation is currently disabled. This website is for portfolio display only.")
                             }
                         }
                     }
