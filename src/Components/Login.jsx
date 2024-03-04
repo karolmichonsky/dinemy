@@ -3,7 +3,7 @@ import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 import data from '../database/account.js'
 
-const Login = ({ closeLogin }) => {
+const Login = ({ closeLogin, userLogged}) => {
 
     const stopPropagation = (e) => {
         e.stopPropagation();
@@ -38,7 +38,7 @@ const Login = ({ closeLogin }) => {
         if (!register) {
             for (let i = 0; i < data.length; i++) {
                 if (data[i].email === loginValue && data[i].password === passwordValue) {
-                    closeLogin();
+                    userLogged();
                     break;
                 }
                 else {

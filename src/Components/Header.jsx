@@ -4,10 +4,16 @@ import { ShoppingBagIcon, UserIcon } from '@heroicons/react/24/solid'
 import Login from './Login';
 
 const Header = () => {
-    const [showLogin, setShowLogin] = useState(true);
+    const [showLogin, setShowLogin] = useState(false);
+    const [isLogged, changeIsLogged] = useState(false);
+    
 
     const toggleLogin = () => {
         setShowLogin(showLogin => !showLogin);
+    };
+    
+    const toggleIsLogged = () => {
+        changeIsLogged(isLogged => !isLogged);
     };
 
     return (
@@ -29,7 +35,7 @@ const Header = () => {
                     
                 </div>
             </div>
-            {showLogin && <Login closeLogin={toggleLogin} />}
+            {showLogin && !isLogged && <Login closeLogin={toggleLogin} userLogged={toggleIsLogged} />}
         </div>
     );
 };
