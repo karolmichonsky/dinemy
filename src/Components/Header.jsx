@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { ShoppingBagIcon, UserIcon } from '@heroicons/react/24/solid'
 import Login from './Login';
+import ShoppingCart from './ShoppingCart';
 
 const Header = () => {
     const [showLogin, setShowLogin] = useState(false);
+    const [showCart, setShowCart] = useState(false);
     const [isLogged, changeIsLogged] = useState(false);
     
 
+    const toggleCart = () => {
+        setShowCart(showLogin => !showLogin);
+    };
+    
     const toggleLogin = () => {
-        setShowLogin(showLogin => !showLogin);
+        setShowLogin(showCart => !showCart);
     };
     
     const toggleIsLogged = () => {
@@ -29,13 +35,16 @@ const Header = () => {
                 
                 <div className='flex'>
                     <div className='flex'>
-                        <ShoppingBagIcon className=' w-9 bg-white rounded-full drop-shadow-2xl text-orange-500 p-1 lg:mx-2 hover:text-amber-800 duration-300 lg:w-11' />
+                        <ShoppingBagIcon className=' w-9 bg-white rounded-full drop-shadow-2xl text-orange-500 p-1 lg:mx-2 hover:text-amber-800 duration-300 lg:w-11' onClick={toggleCart} />
                         <UserIcon className='w-9 bg-white rounded-full drop-shadow-2xl text-orange-500 p-1 mx-1 lg:mx-2 hover:text-amber-800 duration-300 lg:w-11' onClick={toggleLogin} />
                     </div>
                     
                 </div>
             </div>
             {showLogin && !isLogged && <Login closeLogin={toggleLogin} userLogged={toggleIsLogged} />}
+            {showCart && <ShoppingCart closeCart={toggleCart} />}
+
+
         </div>
     );
 };
