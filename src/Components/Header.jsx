@@ -11,10 +11,12 @@ const Header = () => {
     
 
     const toggleCart = () => {
+        setShowLogin(false);
         setShowCart(showLogin => !showLogin);
     };
     
     const toggleLogin = () => {
+        setShowCart(false);
         setShowLogin(showCart => !showCart);
     };
     
