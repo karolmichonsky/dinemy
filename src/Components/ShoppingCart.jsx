@@ -1,6 +1,7 @@
 import React from 'react';
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import cart from '../Assets/cart.png';
+import { Link } from 'react-router-dom';
 
 
 const ShoppingCart = ({ closeCart }) => {
@@ -15,7 +16,7 @@ const ShoppingCart = ({ closeCart }) => {
                     <img src={cart} alt="" />
                     <h1 className='text-2xl font-bold'>Your cart is empty</h1>
                     <p className='text-xl text-center'>Please browse our menu to add items to your cart</p>
-                    <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500 my-2' onClick={closeCart}>ORDER NOW</button>
+                    <Link to={'/Order'}><button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500 my-2' onClick={closeCart}>ORDER NOW</button></Link>
                 </div>
             </div>
         </div>
