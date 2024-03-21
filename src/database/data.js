@@ -66,6 +66,37 @@ const data = [
         price: "12.75",
         choice: "Beef, Vege",
         rating: 4,
+    },{
+        img: pasta,
+        title: "Tonkotsu Ramen",
+        description: "A rich Japanese noodle soup with a pork bone broth, served with thin noodles, slices of pork belly, green onions, and a soft-boiled egg.",
+        price: "15.99",
+        choice: "Pork, Chicken, Vegetarian",
+        rating: 4,
+    },
+    {
+        img: pasta,
+        title: "Chicken Burrito",
+        description: "A hearty Mexican wrap filled with seasoned chicken, rice, beans, cheese, and salsa, all wrapped in a soft flour tortilla.",
+        price: "11.50",
+        choice: "Chicken, Beef, Vegetarian",
+        rating: 4,
+    },
+    {
+        img: pasta,
+        title: "Sushi Platter",
+        description: "An assortment of fresh sushi, including nigiri and rolls with various fillings like salmon, tuna, avocado, and cucumber.",
+        price: "22.00",
+        choice: "Salmon, Tuna, Avocado, Cucumber",
+        rating: 5,
+    },
+    {
+        img: pasta,
+        title: "Falafel Wrap",
+        description: "Middle Eastern dish of spiced chickpea patties served in a wrap with lettuce, tomato, and tahini sauce.",
+        price: "9.99",
+        choice: "Classic, Spicy, Garlic",
+        rating: 4,
     }
 ];
 
