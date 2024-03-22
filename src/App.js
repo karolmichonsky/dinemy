@@ -4,8 +4,10 @@ import Main from './App/Main.jsx';
 import Order from './App/Order.jsx';
 import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';
+import { cartStorage } from './database/cartStorage.js'
 
 function App() {
+  cartStorage.init();
   return (
     <Router>
       <Header />
