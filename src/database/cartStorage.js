@@ -31,4 +31,13 @@ export class cartStorage {
     static consoleLog() {
         console.log(JSON.parse(sessionStorage.getItem("cart") || "[]"));
     }
+
+    static isEmpty() {
+        const cart = JSON.parse(sessionStorage.getItem("cart") || "[]");
+        return cart.length === 0;
+    }
+
+    static getCart(){
+        return JSON.parse(sessionStorage.getItem("cart"));
+    }
 }

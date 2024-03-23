@@ -35,7 +35,7 @@ const Dishes = () => {
                         </div>
                         <div className='  flex md:flex-col'>
                             <div className=' flex justify-end' >
-                                < PlusIcon className="w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-1" onClick={cartStorage.setItem(dishes.price)} />
+                                < PlusIcon className="w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-1" onClick={()=>cartStorage.setItem(dishes)} />
                             </div>
                             <img src={dishes.img} alt="" className=' max-w-32 h-auto' />
                             
