@@ -53,22 +53,12 @@ export class cartStorage {
     static minusDish(item) {
         const cart = JSON.parse(sessionStorage.getItem("cart") || "[]");
         for (let i = 0; i < cart.length; i++) {
-            if (item.choice === cart[i].choice) {
+            if (item.title === cart[i].title) {
                 cart[i].count -= 1;
                 sessionStorage.setItem("cart", JSON.stringify(cart));
                 if (cart[i].count === 0) {
                     this.removeItem(i);
                 }
-                return 0;
-            }
-        }
-    }
-    static plusDish(item){
-        const cart = JSON.parse(sessionStorage.getItem("cart") || "[]");
-        for (let i = 0; i < cart.length; i++) {
-            if (item.choice === cart[i].choice) {
-                cart[i].count += 1;
-                sessionStorage.setItem("cart", JSON.stringify(cart));
                 return 0;
             }
         }

@@ -32,7 +32,7 @@ const ShoppingCart = ({ closeCart }) => {
                             <div className='flex flex-row items-center mx-auto'>
                                 <MinusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={()=>cartStorage.minusDish(dishes)} />
                                 <h1>{dishes.count}</h1>
-                                <PlusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={()=>cartStorage.plusDish(dishes)}/>
+                                <PlusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={()=>cartStorage.setItem(dishes)}/>
                             </div>
                             <hr className=" w-full my-4 bg-gray-300 border-1 " />
                         </div>

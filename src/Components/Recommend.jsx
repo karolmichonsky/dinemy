@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../database/data.js'
+import { cartStorage } from '../database/cartStorage';
 
 const Recommend = () => {
 
@@ -13,10 +14,10 @@ const Recommend = () => {
                 {filteredData.map((recommend) => (
                     <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500 basis-full'>
                         <img src={recommend.img} alt="" className=' w-72 min-w-40 flex mx-auto ease-in-out duration-500' />
-                        <h1 className='text-4xl font-bold text-center py-2'>{recommend.name}</h1>
+                        <h1 className='text-4xl font-bold text-center py-2'>{recommend.title}</h1>
                         <p className='text-center text-xl py-2 flex-1  '>{recommend.description}</p>
                         <h1 className='text-3xl font-bold text-center py-2 pb-4'>{recommend.price}$</h1>
-                        <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500'>ADD TO CART</button>
+                        <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500' onClick={()=>cartStorage.setItem(recommend)}>ADD TO CART</button>
                     </div>
                 ))}
             </div>
