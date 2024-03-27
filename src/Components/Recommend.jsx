@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../database/data.js'
 import { cartStorage } from '../database/cartStorage';
+import Button1 from './Button1.jsx';
 
 const Recommend = () => {
 
@@ -17,7 +18,7 @@ const Recommend = () => {
                         <h1 className='text-4xl font-bold text-center py-2'>{recommend.title}</h1>
                         <p className='text-center text-xl py-2 flex-1  '>{recommend.description}</p>
                         <h1 className='text-3xl font-bold text-center py-2 pb-4'>{recommend.price}$</h1>
-                        <button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500' onClick={()=>cartStorage.setItem(recommend)}>ADD TO CART</button>
+                        <Button1 text="ADD TO CART" onClick={()=>cartStorage.setItem(recommend)} />
                     </div>
                 ))}
             </div>

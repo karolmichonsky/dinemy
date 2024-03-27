@@ -4,6 +4,7 @@ import { XMarkIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/solid'
 import cart from '../Assets/cart.png';
 import { Link } from 'react-router-dom';
 import { cartStorage } from '../database/cartStorage';
+import Button1 from './Button1';
 
 
 const ShoppingCart = ({ closeCart }) => {
@@ -23,7 +24,7 @@ const ShoppingCart = ({ closeCart }) => {
                     <img src={cart} alt="" />
                     <h1 className='text-2xl font-bold'>Your cart is empty</h1>
                     <p className='text-xl text-center'>Please browse our menu to add items to your cart</p>
-                    <Link to={'/Order'}><button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500 my-2' onClick={closeCart}>ORDER NOW</button></Link>
+                    <Link to={'/Order'}><Button1 text="ORDER NOW" onClick={closeCart} /></Link>
                 </div>}
                 {cartStatus && <div className='flex flex-col  mx-auto  sm:h-screen sm:w-[450px] sm:rounded-lg p-8 overflow-auto' >
                     {cartStorage.getCart().map((dishes) => (
@@ -43,7 +44,8 @@ const ShoppingCart = ({ closeCart }) => {
                         <h1 className='flex text-md justify-between w-full py-1'>Total cost: <span className=' font-bold'>{cartStorage.getPrice()}$</span></h1>
                     </div>
                     <div className='flex justify-center'>
-                        <Link to={'/Order'}><button className='bg-orange-500 rounded-xl shadow-lg text-white text-2xl p-2 group-hover:bg-amber-800 duration-500 mt-2 mb-10' onClick={closeCart}>PAY {cartStorage.getPrice()}$</button></Link>
+                        <Link to={'/Order'}><Button1 text={`PAY ${cartStorage.getPrice()}$`} onClick={closeCart}/></Link>
+                        
                     </div>
                 </div>}
             </div>
