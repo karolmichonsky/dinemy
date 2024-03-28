@@ -9,10 +9,45 @@ import Button1 from './Button1';
 
 const ShoppingCart = ({ closeCart }) => {
 
+    const [cartItems, setCartItems] = useState([]);
     const [cartStatus, setCartStatus] = useState(true);
+
     useEffect(() => {
+        const cart = JSON.parse(sessionStorage.getItem("cart") || "[]");
+        setCartItems(cart);
         setCartStatus(!cartStorage.isEmpty());
     }, []);
+
+    const updateCart = (newCart) => {
+        setCartItems(newCart);
+        sessionStorage.setItem("cart", JSON.stringify(newCart));
+    };
+
+    const addItem = (item) => {
+        const newCart = [...cartItems];
+        const itemIndex = newCart.findIndex((i) => i.choice === item.choice);
+        if (itemIndex >= 0) {
+            newCart[itemIndex].count += 1;
+        } else {
+            item.count = 1;
+            newCart.push(item);
+        }
+        updateCart(newCart);
+    };
+
+    const removeItem = (item) => {
+        const newCart = [...cartItems];
+        const itemIndex = newCart.findIndex((i) => i.title === item.title);
+        if (itemIndex >= 0) {
+            newCart[itemIndex].count -= 1;
+            if (newCart[itemIndex].count === 0) {
+                newCart.splice(itemIndex, 1);
+            }
+        }
+        updateCart(newCart);
+        setCartStatus(!cartStorage.isEmpty());
+    };
+
     const stopPropagation = (e) => {
         e.stopPropagation();
     };
@@ -31,9 +66,9 @@ const ShoppingCart = ({ closeCart }) => {
                         <div className='flex flex-col justify-start items-start text-md'>
                             <h1 className='flex font-bold justify-between w-full'>{dishes.title} <span className=' font-normal'>{dishes.price * dishes.count}$</span></h1>
                             <div className='flex flex-row items-center mx-auto'>
-                                <MinusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={()=>cartStorage.minusDish(dishes)} />
+                                <MinusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={() => removeItem(dishes)} />
                                 <h1>{dishes.count}</h1>
-                                <PlusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={()=>cartStorage.setItem(dishes)}/>
+                                <PlusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={() => addItem(dishes)} />
                             </div>
                             <hr className=" w-full my-4 bg-gray-300 border-1 " />
                         </div>
@@ -44,8 +79,8 @@ const ShoppingCart = ({ closeCart }) => {
                         <h1 className='flex text-md justify-between w-full py-1'>Total cost: <span className=' font-bold'>{cartStorage.getPrice()}$</span></h1>
                     </div>
                     <div className='flex justify-center'>
-                        <Link to={'/Order'}><Button1 text={`PAY ${cartStorage.getPrice()}$`} onClick={closeCart}/></Link>
-                        
+                        <Link to={'/Order'}><Button1 text={`PAY ${cartStorage.getPrice()}$`} onClick={closeCart} /></Link>
+
                     </div>
                 </div>}
             </div>
