@@ -32,7 +32,7 @@ const Header = () => {
                     <Link to={'/'}><h1 href="/" className='text-3xl bold text-white font-roboto font-bold mx-3'>DINEMY</h1></Link>
                     <div className='rounded-2xl w-36 h-10 bg-white flex drop-shadow-md px-3 sm:w-72 lg:w-96 duration-300 sm:mx-12'>
                         <MagnifyingGlassIcon className='w-7 text-orange-500' />
-                        <input type="text" name="" id="" placeholder='Search for your favorite food' className=' bg-white w-full px-3 focus:outline-none text-black'/>
+                        <input type="text" name="" id="" placeholder='Search for your favorite food' className=' bg-white w-full px-3 focus:outline-none text-black mr-1'/>
                     </div>
                 </div>
                 

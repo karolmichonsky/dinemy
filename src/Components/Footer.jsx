@@ -4,7 +4,7 @@ import { DevicePhoneMobileIcon, MapPinIcon} from '@heroicons/react/24/outline'
 
 const Footer = () => {
     return (
-        <div className='flex flex-wrap text-white bg-amber-800 p-8 lg:px-44 lg:py-16'>
+        <div className='flex  justify-center flex-wrap text-white bg-amber-800 p-8 lg:px-44 lg:py-16'>
             <div className='flex flex-col px-8 w-1/2'>
                 <h1 className=' text-2xl font-bold'>Dinemy</h1>
                 <h3 className=' text-lg hidden lg:block '>Thank you for choosing <b>Dinemy</b> for your food ordering needs! We're dedicated to bringing you the tastiest dishes with convenience at your fingertips.</h3>
@@ -21,7 +21,7 @@ const Footer = () => {
                     <a href="/"><li>Home</li></a>
                 </ul>
             </div>
-            <div className='w-1/4'>
+            <div className='w-1/4 hidden sm:block'>
                 <h1 className=' text-2xl font-bold'>Top cuisines</h1>
                 <ul className=' list-none'>
                     <a href="/"><li>Chinese</li></a>
