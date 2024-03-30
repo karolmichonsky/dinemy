@@ -1,6 +1,6 @@
 import React from 'react';
 import Play from '../Assets/play.png';
-import Food from '../Assets/food.png';
+import Appphoto from '../Assets/appphoto.png';
 import AppStore from '../Assets/appstore.png';
 
 const Store = () => {
@@ -12,7 +12,7 @@ const Store = () => {
                 <img src={AppStore} alt="" className=' max-h-20'/>
             </div>
             <div className='pl-7 hidden sm:block'>
-                <img src={Food} alt="" className=' max-h-92'/>
+                <img src={Appphoto} alt="" className=' max-h-92'/>
             </div>
         </div>
     );
