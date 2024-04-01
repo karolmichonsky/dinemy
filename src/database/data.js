@@ -21,7 +21,7 @@ const data = [
     },
     {
         img: pasta,
-        title: "Panang",
+        title: "Red Pasta",
         description: "Traditional Italian pasta with tomato sauce, onions, garlic, ground meat, and herbs like basil and oregano, creating a savory and flavorful dish.",
         price: "13.25",
         choice: "Chicken, Vege, Whole wheat",
