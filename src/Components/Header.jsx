@@ -20,11 +20,13 @@ const Header = () => {
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
-            toggleIsSearching(true);
             const filteredResults = data.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()));
             setSearchResult(filteredResults);
-            if(filteredResults.length===0){
-                toggleIsSearching(false);
+            if(filteredResults.length!==0 && searchValue!==''){
+                toggleIsSearching(true);
+            }
+            else{
+                toggleIsSearching(false)
             }
         }, 500);
 
@@ -59,7 +61,7 @@ const Header = () => {
                         <Link to={'/'}><h1 href="/" className='text-3xl bold text-white font-roboto font-bold mx-3'>DINEMY</h1></Link>
                         <div className='rounded-2xl w-36 h-10 bg-white flex drop-shadow-md px-3 sm:w-72 lg:w-96 duration-300 sm:mx-12'>
                             <MagnifyingGlassIcon className='w-7 text-orange-500' />
-                            <input type="text" value={searchValue} name="" id="" placeholder='Search for your favorite food' onChange={searchHandle} onFocus={()=>toggleIsSearching(false)} onBlur={()=>toggleIsSearching(false)} className=' bg-white w-full px-3 focus:outline-none text-black mr-1' />
+                            <input type="text" value={searchValue} name="" id="" placeholder='Search for your favorite food' onChange={searchHandle} onBlur={()=>toggleIsSearching(false)} className=' bg-white w-full px-3 focus:outline-none text-black mr-1' />
                         </div>
                     </div>
 

@@ -64,7 +64,7 @@ const ShoppingCart = ({ closeCart }) => {
                 {cartStatus && <div className='flex flex-col  mx-auto  sm:h-screen sm:w-[450px] sm:rounded-lg p-8 overflow-auto' >
                     {cartStorage.getCart().map((dishes) => (
                         <div className='flex flex-col justify-start items-start text-md'>
-                            <h1 className='flex font-bold justify-between w-full'>{dishes.title} <span className=' font-normal'>{dishes.price * dishes.count}$</span></h1>
+                            <h1 className='flex font-bold justify-between w-full'>{dishes.title} <span className=' font-normal'>{Math.floor(dishes.price * dishes.count*100)/100}$</span></h1>
                             <div className='flex flex-row items-center mx-auto'>
                                 <MinusIcon className='w-8 cursor-pointer rounded-full bg-slate-100 p-1 m-2' onClick={() => removeItem(dishes)} />
                                 <h1>{dishes.count}</h1>
