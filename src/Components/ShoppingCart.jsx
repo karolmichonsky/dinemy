@@ -78,7 +78,7 @@ const ShoppingCart = ({ closeCart }) => {
                         <h1 className='flex text-md justify-between w-full py-1/2'>Delivery: <span className=' font-bold'>0.00$</span></h1>
                         <h1 className='flex text-md justify-between w-full py-1'>Total cost: <span className=' font-bold'>{cartStorage.getPrice()}$</span></h1>
                     </div>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center pb-10'>
                         <Link to={'/Order'}><Button1 text={`PAY ${cartStorage.getPrice()}$`} onClick={closeCart} /></Link>
 
                     </div>
