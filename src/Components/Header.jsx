@@ -83,12 +83,8 @@ const Header = () => {
                                     <h1 className=' text-md font-bold py-1'>{search.title}</h1>
                                     <h1 className=' font-bold'>{search.price}$</h1>
                                 </div>
-
                                 < PlusIcon className="w-8 h-8 cursor-pointer rounded-full bg-slate-100 p-1 m-1 group-hover:bg-slate-200" onClick={() => cartStorage.setItem(search)} />
                             </div>
-
-
-
                         </div>
                     ))}
                 </div>}

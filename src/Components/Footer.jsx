@@ -21,16 +21,6 @@ const Footer = () => {
                     <Link to={'/'}><li>Home</li></Link>
                 </ul>
             </div>
-            <div className='w-1/4 hidden sm:block'>
-                <h1 className=' text-2xl font-bold'>Top cuisines</h1>
-                <ul className=' list-none'>
-                    <Link to={'/Order'}><li>Chinese</li></Link>
-                    <Link to={'/Order'}><li>Pizza</li></Link>
-                    <Link to={'/Order'}><li>Kebab</li></Link>
-                    <Link to={'/Order'}><li>Sushi</li></Link>
-                    <Link to={'/Order'}><li>Indian</li></Link>
-                </ul>
-            </div>
         </div>
     );
 };
