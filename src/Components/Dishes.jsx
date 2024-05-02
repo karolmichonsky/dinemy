@@ -20,7 +20,7 @@ const Dishes = () => {
                             <div className=' flex justify-end items-center' >
                                 < PlusIcon className="w-8 h-8 cursor-pointer rounded-full bg-slate-100 p-1 m-1 group-hover:bg-slate-200" onClick={()=>cartStorage.setItem(dishes)} />
                             </div>
-                            <img src={dishes.img} alt="" className=' max-w-32 h-auto drop-shadow-xl' />
+                            <img src={dishes.img} alt={dishes.title} className=' max-w-32 h-auto drop-shadow-xl' />
                             
                         </div>
                     </div>

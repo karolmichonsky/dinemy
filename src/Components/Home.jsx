@@ -21,7 +21,7 @@ const Home = () => {
                 <Link to={'/Order'}><Button1 text="ORDER NOW"></Button1></Link>
             </div>
             <div className='p-7 pb-0'>
-                <img src={fries} alt="" className=' drop-shadow-2xl'/>
+                <img src={fries} alt="Fries" className=' drop-shadow-2xl'/>
             </div>
         </div>
     );

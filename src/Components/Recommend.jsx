@@ -14,7 +14,7 @@ const Recommend = () => {
             <div className='flex justify-center items-center gap-20 flex-wrap'>
                 {filteredData.map((recommend) => (
                     <div className='py-12 px-8 shadow-lg rounded-xl bg-white max-w-[22rem] flex flex-col items-center group hover:bg-orange-500 duration-500 basis-full'>
-                        <img src={recommend.img} alt="" className=' w-72 min-w-40 flex mx-auto ease-in-out duration-500 drop-shadow-xl' />
+                        <img src={recommend.img} alt={recommend.title} className=' w-72 min-w-40 flex mx-auto ease-in-out duration-500 drop-shadow-xl' />
                         <h1 className='text-4xl font-bold text-center py-2'>{recommend.title}</h1>
                         <p className='text-center text-xl py-2 flex-1  '>{recommend.description}</p>
                         <h1 className='text-3xl font-bold text-center py-2 pb-4'>{recommend.price}$</h1>

@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div className='p-8  flex flex-col lg:py-16'>
             <div className='mx-auto lg:py-8'>
-                <img src={shrimps} alt="" className='' />
+                <img src={shrimps} alt="Shrimp dish" className='' />
             </div>
             <div className='text-center px-20'>
                 <h1 className=' text-4xl font-bold pt-4 pb-1'>Delicious Dishes</h1>

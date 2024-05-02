@@ -56,7 +56,7 @@ const ShoppingCart = ({ closeCart }) => {
             <div className='flex flex-col p-2 sm:bg-white' onClick={stopPropagation} >
                 <XMarkIcon className=' w-12 text-orange-500 cursor-pointer' onClick={closeCart} />
                 {!cartStatus && <div className='flex flex-col justify-center items-center mx-auto  sm:h-screen sm:w-[450px] sm:rounded-lg p-8' >
-                    <img src={cart} alt="" />
+                    <img src={cart} alt="Cart with items" />
                     <h1 className='text-2xl font-bold'>Your cart is empty</h1>
                     <p className='text-xl text-center'>Please browse our menu to add items to your cart</p>
                     <Link to={'/Order'}><Button1 text="ORDER NOW" onClick={closeCart} /></Link>
